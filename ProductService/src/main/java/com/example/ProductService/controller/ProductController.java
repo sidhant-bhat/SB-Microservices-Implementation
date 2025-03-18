@@ -36,8 +36,6 @@ public class ProductController {
             @RequestParam long quantity) {
     productService.reduceQuantity(productId,quantity);
     return new ResponseEntity<>(HttpStatus.OK);
-
-
  }
 
 }
