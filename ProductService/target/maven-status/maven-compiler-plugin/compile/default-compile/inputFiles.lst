@@ -1,0 +1,11 @@
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/service/ProductService.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/entity/Product.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/exception/ProductServiceCustomException.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/exception/RestResponseEntityExceptionHandler.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/model/ProductRequest.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/controller/ProductController.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/repository/ProductRepository.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/ProductServiceApplication.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/model/ErrorResponse.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/service/ProductServiceImpl.java
+/Users/ar-sidhant.bhat/Desktop/ProductService/src/main/java/com/example/ProductService/model/ProductResponse.java
