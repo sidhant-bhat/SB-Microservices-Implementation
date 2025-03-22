@@ -3,6 +3,7 @@ package com.example.OrderService.service;
 
 
 import com.example.OrderService.entity.Orderss;
+import com.example.OrderService.external.client.ProductService;
 import com.example.OrderService.model.OrderRequest;
 import com.example.OrderService.repository.OrderRepository;
 
@@ -21,6 +22,9 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private ProductService productService;
+
     @Override
     public long placeOrder(OrderRequest orderRequest) {
 
@@ -31,7 +35,9 @@ public class OrderServiceImpl implements OrderService {
         //Cancelled
 
         log.info("Placing Order Request:{}",orderRequest);
+        productService.reduceQuantity(orderRequest.getProductId(),orderRequest.getQuantity());
 
+        log.info("Creating Order with Status CREATED");
         Orderss order = Orderss.builder()
                 .amount(orderRequest.getTotalAmount())
                 .orderStatus("CREATED")

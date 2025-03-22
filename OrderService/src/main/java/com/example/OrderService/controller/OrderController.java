@@ -1,5 +1,6 @@
 package com.example.OrderService.controller;
 
+import com.example.OrderService.exception.CustomException;
 import com.example.OrderService.model.OrderRequest;
 import com.example.OrderService.service.OrderService;
 import lombok.extern.log4j.Log4j2;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.yaml.snakeyaml.nodes.Tag.STR;
+
 @RestController
 @RequestMapping("/order")
 @Log4j2
@@ -28,9 +31,8 @@ public class OrderController {
         long productId = orderRequest.getProductId();
       long orderId = orderService.placeOrder(orderRequest);
       log.info("Order Id:{}",orderId);
-      //return new  ResponseEntity<>(orderId, HttpStatus.OK);
-
-        List<Long> response = Arrays.asList(orderId, productId);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+      //return new  ResponseEntity<>(orderId, HttpStatus.OK)
+            List<Long> response = Arrays.asList(orderId, productId);
+            return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
